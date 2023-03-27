@@ -4,14 +4,16 @@ import java.util.Date;
 public class Footage {
     private final int ID;
     private final String title;
-    private final Date date;
+    private final int date;
     private final Integer duration;
+    private final int journalist;
 
-    public Footage(int ID, String title, Date date, Integer duration) {
+    public Footage(int ID, String title, int date, Integer duration, int journalist) {
         this.ID = ID;
         this.title = title;
         this.date = date;
         this.duration = duration;
+        this.journalist = journalist;
     }
 
     public int getID(){
@@ -20,7 +22,7 @@ public class Footage {
     public String getTitle() {
         return title;
     }
-    public Date getDate() { return date; }
+    public int getDate() { return date; }
     public Integer getDuration() {
         return duration;
     }

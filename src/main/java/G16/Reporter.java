@@ -7,16 +7,20 @@ public class Reporter {
     private final String streetName;
     private final Integer civicNumber;
     private final Integer zipCode;
-    private final String country;
+    private final String county;
+    private final int phoneNum;
+    private final String email;
 
-    public Reporter(Integer cpr, String firstName, String lastName, String streetName, Integer civicNumber, Integer zipCode, String country) {
+    public Reporter(Integer cpr, String firstName, String lastName, String streetName, Integer civicNumber, Integer zipCode, String county, int phoneNum, String email) {
         this.cpr = cpr;
         this.firstName = firstName;
         this.lastName = lastName;
         this.streetName = streetName;
         this.civicNumber = civicNumber;
         this.zipCode = zipCode;
-        this.country = country;
+        this.county = county;
+        this.phoneNum = phoneNum;
+        this.email = email;
     }
 
     public Integer getCPR() { return cpr; }
@@ -39,16 +43,22 @@ public class Reporter {
 
     public Integer getZIPCode() { return zipCode; }
 
-    public String getCountry() {
-        return country;
+    public String getCounty() {
+        return county;
     }
 
+    public int getPhoneNum() {
+        return phoneNum;
+    }
+    public String getEmail(){
+        return email;
+    }
 
     @Override
     public String toString() {
         final String D = ";";
 
-        return getCPR() + D + getFirstName() + D + getLastName() + D + getStreetName() + D + getCivicNumber() + D + getZIPCode() + D + getCountry();
+        return getCPR() + D + getFirstName() + D + getLastName() + D + getStreetName() + D + getCivicNumber() + D + getZIPCode() + D + getCounty() + D +getPhoneNum();
     }
 
 }
