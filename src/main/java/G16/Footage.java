@@ -2,16 +2,21 @@ package G16;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 public class Footage {
+    private final int ID;
     private final String title;
     private final Date date;
     private final Integer duration;
 
-    public Footage(String title, Date date, Integer duration) {
+    public Footage(int ID, String title, Date date, Integer duration) {
+        this.ID = ID;
         this.title = title;
         this.date = date;
         this.duration = duration;
     }
 
+    public int getID(){
+        return ID;
+    }
     public String getTitle() {
         return title;
     }

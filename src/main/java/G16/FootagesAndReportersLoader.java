@@ -23,7 +23,7 @@ public class FootagesAndReportersLoader {
 
     public static final String SEMICOLON_DELIMITER = ";";
     public static final String COMMA_DELIMITER = ",";
-    private static final int NUMBER_OF_FIELDS_EXPECTED = 10;
+    private static final int NUMBER_OF_FIELDS_EXPECTED = 11;
     private final String delimiter = SEMICOLON_DELIMITER;
     SimpleDateFormat dateParser = new SimpleDateFormat("yyyyMMdd");
 
@@ -47,22 +47,23 @@ public class FootagesAndReportersLoader {
                     if(values.size() == 0)
                         continue;
                     if(values.size() == NUMBER_OF_FIELDS_EXPECTED) {
-                        String title = values.get(0);
+                        int id = Integer.parseInt(values.get(0));
+                        String title = values.get(1);
                         Date date = null;
                         try {
-                            date = dateParser.parse(values.get(1));
+                            date = dateParser.parse(values.get(2));
                         } catch (ParseException e) {
                             throw new NumberFormatException("Invalid value (" + values.get(1) + ") for date at line " + lineNbr);
                         }
-                        Integer duration = Integer.valueOf(values.get(2));
-                        Integer cpr = Integer.valueOf(values.get(3));
-                        String firstName = values.get(4);
-                        String lastName = values.get(5);
-                        String streetName = values.get(6);
-                        Integer civicNumber = Integer.valueOf(values.get(7));
-                        Integer zipCode  = Integer.valueOf(values.get(8));
-                        String country = values.get(9);
-                        FootageAndReporter far = new FootageAndReporter(title, date, duration, cpr, firstName, lastName, streetName, civicNumber, zipCode, country);
+                        Integer duration = Integer.valueOf(values.get(3));
+                        Integer cpr = Integer.valueOf(values.get(4));
+                        String firstName = values.get(5);
+                        String lastName = values.get(6);
+                        String streetName = values.get(7);
+                        Integer civicNumber = Integer.valueOf(values.get(8));
+                        Integer zipCode  = Integer.valueOf(values.get(9));
+                        String county = values.get(10);
+                        FootageAndReporter far = new FootageAndReporter(id,title, date, duration, cpr, firstName, lastName, streetName, civicNumber, zipCode, county);
                         farList.add(far);
                     } else
                         throw new IOException("Invalid number of values on line " +lineNbr +". expected " +NUMBER_OF_FIELDS_EXPECTED +" values, found " +values.size());
