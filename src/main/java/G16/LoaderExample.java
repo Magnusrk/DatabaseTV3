@@ -9,8 +9,8 @@ import java.sql.*;
 public class LoaderExample {
 
     public static void main(String[] args) {
-        String url = "jdbc:mysql://localhost:3306/test";
-        String username = "Karen";
+        String url = "jdbc:mysql://localhost:3306/TV3";
+        String username = "karen";
         String password = "";
         FootagesAndReportersLoader loader = new FootagesAndReportersLoader();
         try {
@@ -38,7 +38,7 @@ public class LoaderExample {
 
     public static void createDatebase(Connection connection) throws SQLException {
         Statement stmt = connection.createStatement();
-        String use = "USE test";
+        String use = "USE TV3";
         stmt.execute(use);
 
     }
@@ -76,7 +76,7 @@ public class LoaderExample {
             Footage footage = footagesAndReporters.get(i).getFootage();
             Reporter reporter = footagesAndReporters.get(i).getReporter();
 
-            String sql = "INSERT INTO footage (ID, title, date, duration, CPR) VALUES " +
+            String sql = "INSERT INTO footage (ID, title, dateshot, duration, reporter) VALUES " +
                     "("+D+footage.getID()+D+","+D+footage.getTitle()+D+","+footage.getDate()+","+D+footage.getDuration()+D+","+D+reporter.getCPR()+D+")";
             try {
                 stmt.execute(sql);
@@ -94,7 +94,7 @@ public class LoaderExample {
         String D = "\"";
         for (int i = 0; i < footagesAndReporters.size(); i++){
             Reporter reporter = footagesAndReporters.get(i).getReporter();
-                String sql = "INSERT INTO journalist (CPR, First_name, Last_name, Street, Civic_num, ZIP_code, County, Phone_number, Email_address) VALUES " +
+                String sql = "INSERT INTO journalist (CPR, First_name, Last_name, Street, Civic_num, ZIP_code, Country, Phone_number, Email_address) VALUES " +
                         "(" + reporter.getCPR() + "," + D + reporter.getFirstName() + D + "," + D + reporter.getLastName() + D + ","
                         + D + reporter.getStreetName() + D + "," + D + reporter.getCivicNumber() + D + "," + D + reporter.getZIPCode() + D + "," +
                         D + reporter.getCounty() + D + "," + D + reporter.getPhoneNum() + D + "," + D + reporter.getEmail() + D + ")";
