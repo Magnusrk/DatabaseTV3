@@ -23,8 +23,9 @@ public class FootagesAndReportersLoader {
 
     public static final String SEMICOLON_DELIMITER = ";";
     public static final String COMMA_DELIMITER = ",";
-    private static final int NUMBER_OF_FIELDS_EXPECTED = 13;
+    private static final int NUMBER_OF_FIELDS_EXPECTED = 10;
     private final String delimiter = SEMICOLON_DELIMITER;
+    private int id = 1;
     SimpleDateFormat dateParser = new SimpleDateFormat("yyyyMMdd");
 
     public List<FootageAndReporter> loadFootagesAndReporters(String filename) throws FileNotFoundException, IOException {
@@ -48,28 +49,19 @@ public class FootagesAndReportersLoader {
                     if(values.size() == 0)
                         continue;
                     if(values.size() == NUMBER_OF_FIELDS_EXPECTED) {
-                        Integer ID = Integer.valueOf(values.get(0));
-                        String title = values.get(1);
-                        Integer date = Integer.valueOf(values.get(2));
-                        //Date date = null;
-                        /*
-                        try {
-                            date = dateParser.parse(values.get(2));
-                        } catch (ParseException e) {
-                            throw new NumberFormatException("Invalid value (" + values.get(1) + ") for date at line " + lineNbr);
-                        }
-
-                         */
-                        Integer duration = Integer.valueOf(values.get(3));
-                        Integer cpr = Integer.valueOf(values.get(4));
-                        String firstName = values.get(5);
-                        String lastName = values.get(6);
-                        String streetName = values.get(7);
-                        Integer civicNumber = Integer.valueOf(values.get(8));
-                        Integer zipCode  = Integer.valueOf(values.get(9));
-                        String county = values.get(10);
-                        int phoneNum = Integer.parseInt(values.get(11));
-                        String email = values.get(12);
+                        Integer ID = Integer.valueOf(id++);
+                        String title = values.get(0);
+                        Integer date = Integer.valueOf(values.get(1));
+                        Integer duration = Integer.valueOf(values.get(2));
+                        Integer cpr = Integer.valueOf(values.get(3));
+                        String firstName = values.get(4);
+                        String lastName = values.get(5);
+                        String streetName = values.get(6);
+                        Integer civicNumber = Integer.valueOf(values.get(7));
+                        Integer zipCode  = Integer.valueOf(values.get(8));
+                        String county = values.get(9);
+                        int phoneNum = 0;
+                        String email = null;
                         FootageAndReporter far = new FootageAndReporter(ID,title, date, duration, cpr, firstName, lastName, streetName, civicNumber, zipCode, county, phoneNum, email);
                         farList.add(far);
                     } else

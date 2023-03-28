@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="54acae45-9c90-4dc5-a0c6-f26be0d58850" name="Changes" comment="added insert into table journalist and footage from a file">
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/G16/FootagesAndReportersLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/G16/FootagesAndReportersLoader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/G16/uploads.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/G16/uploads.csv" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2NacG8LvlbSrUxp9e2cggcAIdmI" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
+    ]
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\magnu\IdeaProjects\DatabaseTV3\src\main\java\G16" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Run program" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="G16.LoaderExample" />
+      <module name="DatabaseTV3" />
+      <option name="PROGRAM_PARAMETERS" value="src/main/java/G16/uploads.csv" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="54acae45-9c90-4dc5-a0c6-f26be0d58850" name="Changes" comment="" />
+      <created>1679905534734</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1679905534734</updated>
+      <workItem from="1679905537006" duration="13614000" />
+      <workItem from="1679983277586" duration="1060000" />
+    </task>
+    <task id="LOCAL-00001" summary="Init comit">
+      <created>1679906399060</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1679906399060</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Added inserFootage and added insertReportes skeleton">
+      <created>1679912506393</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1679912506393</updated>
+    </task>
+    <task id="LOCAL-00003" summary="added insert into table journalist and footage from a file">
+      <created>1679920807937</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1679920807937</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Init comit" />
+    <MESSAGE value="Added the ability to connect to a database" />
+    <MESSAGE value="Added inserFootage and added insertReportes skeleton" />
+    <MESSAGE value="added insert into table journalist and footage from a file" />
+    <option name="LAST_COMMIT_MESSAGE" value="added insert into table journalist and footage from a file" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/G16/LoaderExample.java</url>
+          <line>14</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
