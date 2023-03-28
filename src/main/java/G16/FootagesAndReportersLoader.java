@@ -12,6 +12,7 @@ import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.sql.*;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -25,11 +26,19 @@ public class FootagesAndReportersLoader {
     public static final String COMMA_DELIMITER = ",";
     private static final int NUMBER_OF_FIELDS_EXPECTED = 10;
     private final String delimiter = SEMICOLON_DELIMITER;
-    private int id = 1;
+    //int id = 0;
+
     SimpleDateFormat dateParser = new SimpleDateFormat("yyyyMMdd");
 
-    public List<FootageAndReporter> loadFootagesAndReporters(String filename) throws FileNotFoundException, IOException {
+    public List<FootageAndReporter> loadFootagesAndReporters(String filename, Connection connection) throws FileNotFoundException, IOException, SQLException {
         List<FootageAndReporter> farList = new ArrayList<FootageAndReporter>();
+
+        Statement stmt = connection.createStatement();
+
+        String getID = "select * from getlastid";
+        ResultSet rs = stmt.executeQuery(getID);
+        rs.next();
+        int id = rs.getInt(1);
 
         BufferedReader in = null;
         try {
@@ -49,7 +58,9 @@ public class FootagesAndReportersLoader {
                     if(values.size() == 0)
                         continue;
                     if(values.size() == NUMBER_OF_FIELDS_EXPECTED) {
-                        Integer ID = Integer.valueOf(id++);
+
+                        id++;
+                        Integer ID = id;
                         String title = values.get(0);
                         Integer date = Integer.valueOf(values.get(1));
                         Integer duration = Integer.valueOf(values.get(2));
