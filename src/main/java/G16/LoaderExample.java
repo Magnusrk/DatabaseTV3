@@ -16,13 +16,13 @@ public class LoaderExample {
         try {
             Class.forName("com.mysql.jdbc.Driver");
             Connection connection = DriverManager.getConnection(url,username,password);
-            List<FootageAndReporter> footagesAndReporters = loader.loadFootagesAndReporters(args[0]);
+            List<FootageAndReporter> footagesAndReporters = loader.loadFootagesAndReporters(args[0], connection);
 
 
             createDatebase(connection);
-            createFootageTable(connection);
+            //createFootageTable(connection);
 
-            createjournalistTable(connection);
+            //createjournalistTable(connection);
             insertFootage(connection,footagesAndReporters);
             insertReporters(connection,footagesAndReporters);
 
