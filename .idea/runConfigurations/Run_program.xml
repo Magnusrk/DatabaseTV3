@@ -1,0 +1,10 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="Run program" type="Application" factoryName="Application">
+    <option name="MAIN_CLASS_NAME" value="G16.LoaderExample" />
+    <module name="DatabaseTV3" />
+    <option name="PROGRAM_PARAMETERS" value="src/main/java/G16/uploads.csv" />
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>
